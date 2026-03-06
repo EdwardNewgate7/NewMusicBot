@@ -248,4 +248,5 @@ class Config:
 
 
 # Tüm uygulamada kullanılacak Config kopyesi
-
+bot_config = Config()
+config = bot_config
