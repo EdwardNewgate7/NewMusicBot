@@ -211,9 +211,10 @@ class Config:
             "retries": cls.YTDLP_RETRIES,
             "extractor_args": {
                 "youtube": {
-                    "player_client": ["android", "ios", "web", "mweb"],
+                    "player_client": ["android", "ios", "web", "mweb", "android_music"],
                 },
             },
+            "check_formats": False,  # Hız ve stabilite için format kontrolünü atla
             "nocheckcertificate": True,
             "source_address": "0.0.0.0",
             "force_ipv4": True,
@@ -247,4 +248,4 @@ class Config:
 
 
 # Tüm uygulamada kullanılacak Config kopyesi
-config = Config()
+
