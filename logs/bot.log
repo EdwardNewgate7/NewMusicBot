@@ -1,0 +1,136 @@
+2026-03-06 13:00:23  │  INFO      │  HarmonyMusicBot  │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-03-06 13:00:23  │  INFO      │  HarmonyMusicBot  │  🎵 HARMONY MUSIC v3.0.0 BAŞLATILIYOR...
+2026-03-06 13:00:23  │  INFO      │  HarmonyMusicBot  │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-03-06 13:00:23  │  INFO      │  HarmonyMusicBot  │    Bot Adı    : Harmony Music Bot
+2026-03-06 13:00:23  │  INFO      │  HarmonyMusicBot  │    Kullanıcı  : @@HarmonySongMusic_bot
+2026-03-06 13:00:23  │  INFO      │  HarmonyMusicBot  │    Sahip IDs  : [8548853828]
+2026-03-06 13:00:23  │  INFO      │  HarmonyMusicBot  │    Veritabanı : data/harmony_music.db
+2026-03-06 13:00:23  │  INFO      │  HarmonyMusicBot  │    İndirmeler : downloads
+2026-03-06 13:00:23  │  INFO      │  HarmonyMusicBot  │    Maks.Süre  : 600s
+2026-03-06 13:00:23  │  INFO      │  HarmonyMusicBot  │    Throttle   : 2.0s
+2026-03-06 13:00:23  │  INFO      │  HarmonyMusicBot  │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-03-06 13:00:23  │  INFO      │  HarmonyMusicBot  │    🍪 Cookie  : ✅ AKTİF
+2026-03-06 13:00:23  │  INFO      │  HarmonyMusicBot  │    🎚 Kalite  : 320kbps MP3
+2026-03-06 13:00:23  │  INFO      │  HarmonyMusicBot  │    🎬 Video   : 720p
+2026-03-06 13:00:23  │  INFO      │  HarmonyMusicBot  │    📦 Maks.Boy: 50MB
+2026-03-06 13:00:23  │  INFO      │  HarmonyMusicBot  │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-03-06 13:00:23  │  INFO      │  HarmonyMusicBot  │  ✅ Bot başarıyla başlatıldı! Polling dinleniyor...
+2026-03-06 13:00:24  │  INFO      │  HarmonyDB  │  ✅ Veritabanı başlatıldı: data/harmony_music.db
+2026-03-06 13:00:24  │  INFO      │  HarmonyMusicBot  │  ✅ Veritabanı başlatıldı.
+2026-03-06 13:00:24  │  INFO      │  HarmonyMusicBot  │  ✅ Bot komutları Telegram'a kaydedildi.
+2026-03-06 13:00:24  │  INFO      │  HarmonyMusicBot  │  ✅ Gerekli dizinler oluşturuldu.
+2026-03-06 13:00:27  │  INFO      │  pyrogram.crypto.aes  │  Using TgCrypto
+2026-03-06 13:00:28  │  INFO      │  Userbot  │  Asistan (Userbot) başlatılıyor...
+2026-03-06 13:00:29  │  INFO      │  pyrogram.connection.connection  │  Connecting...
+2026-03-06 13:00:29  │  INFO      │  pyrogram.connection.connection  │  Connected! Production DC4 - IPv4
+2026-03-06 13:00:29  │  INFO      │  pyrogram.session.session  │  NetworkTask started
+2026-03-06 13:00:30  │  INFO      │  pyrogram.session.session  │  NetworkTask stopped
+2026-03-06 13:00:30  │  INFO      │  pyrogram.connection.connection  │  Disconnected
+2026-03-06 13:00:30  │  INFO      │  pyrogram.session.session  │  Session stopped
+2026-03-06 13:00:30  │  ERROR     │  Userbot  │  Asistan başlatılamadı: Telegram says: [406 AUTH_KEY_DUPLICATED] (caused by "InvokeWithLayer") Pyrogram 2.3.69 thinks: The same authorization key (session file) was used in more than one place simultaneously. You must delete your session file and log in again with your phone number or bot token
+2026-03-06 13:00:30  │  INFO      │  HarmonyMusicBot  │  🍪 Cookie.txt aktif: ✅ Cookie geçerli! 2 satır, 1 domain (1 YouTube).
+2026-03-06 13:00:30  │  INFO      │  aiogram.dispatcher  │  Start polling
+2026-03-06 13:00:30  │  INFO      │  aiogram.dispatcher  │  Run polling for bot @HarmonySongMusic_bot id=8621616338 - '𝐻𝑎𝑟𝑚𝑜𝑛𝑦 𝑀𝑢𝑠𝑖𝑐'
+2026-03-06 13:00:56  │  INFO      │  aiogram.dispatcher  │  Polling stopped
+2026-03-06 13:00:56  │  INFO      │  HarmonyDB  │  🔴 Veritabanı bağlantısı kapatıldı.
+2026-03-06 13:00:56  │  INFO      │  HarmonyMusicBot  │  🔴 Veritabanı kapatıldı.
+2026-03-06 13:00:56  │  ERROR     │  aiogram.dispatcher  │  Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-03-06 13:00:56  │  WARNING   │  aiogram.dispatcher  │  Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8621616338)
+2026-03-06 13:00:56  │  INFO      │  HarmonyMusicBot  │  🔴 Bot kapatılıyor...
+2026-03-06 13:00:56  │  INFO      │  aiogram.dispatcher  │  Polling stopped for bot @HarmonySongMusic_bot id=8621616338 - '𝐻𝑎𝑟𝑚𝑜𝑛𝑦 𝑀𝑢𝑠𝑖𝑐'
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │  🎵 HARMONY MUSIC v3.0.0 BAŞLATILIYOR...
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │    Bot Adı    : Harmony Music Bot
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │    Kullanıcı  : @@HarmonySongMusic_bot
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │    Sahip IDs  : [8548853828]
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │    Veritabanı : data/harmony_music.db
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │    İndirmeler : downloads
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │    Maks.Süre  : 600s
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │    Throttle   : 2.0s
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │    🍪 Cookie  : ✅ AKTİF
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │    🎚 Kalite  : 320kbps MP3
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │    🎬 Video   : 720p
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │    📦 Maks.Boy: 50MB
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │  ✅ Bot başarıyla başlatıldı! Polling dinleniyor...
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │  ✅ FFmpeg aktif: C:/Program Files/EaseUS/EaseUS Data Recovery Wizard/VideoViewer\ffmpeg.exe
+2026-03-06 17:56:52  │  INFO      │  HarmonyDB  │  ✅ Veritabanı başlatıldı: data/harmony_music.db
+2026-03-06 17:56:52  │  INFO      │  HarmonyMusicBot  │  ✅ Veritabanı başlatıldı.
+2026-03-06 17:56:53  │  INFO      │  HarmonyMusicBot  │  ✅ Bot komutları Telegram'a kaydedildi.
+2026-03-06 17:56:53  │  INFO      │  HarmonyMusicBot  │  ✅ Gerekli dizinler oluşturuldu.
+2026-03-06 17:57:01  │  INFO      │  pyrogram.crypto.aes  │  Using TgCrypto
+2026-03-06 17:57:03  │  INFO      │  Userbot  │  Asistan (Userbot) başlatılıyor...
+2026-03-06 17:57:07  │  INFO      │  pyrogram.connection.connection  │  Connecting...
+2026-03-06 17:57:07  │  INFO      │  pyrogram.connection.connection  │  Connected! Production DC4 - IPv4
+2026-03-06 17:57:07  │  INFO      │  pyrogram.session.session  │  NetworkTask started
+2026-03-06 17:57:08  │  INFO      │  pyrogram.session.session  │  NetworkTask stopped
+2026-03-06 17:57:08  │  INFO      │  pyrogram.connection.connection  │  Disconnected
+2026-03-06 17:57:08  │  INFO      │  pyrogram.session.session  │  Session stopped
+2026-03-06 17:57:08  │  ERROR     │  Userbot  │  Asistan başlatılamadı: Telegram says: [406 AUTH_KEY_DUPLICATED] (caused by "InvokeWithLayer") Pyrogram 2.3.69 thinks: The same authorization key (session file) was used in more than one place simultaneously. You must delete your session file and log in again with your phone number or bot token
+2026-03-06 17:57:08  │  INFO      │  HarmonyMusicBot  │  🍪 Cookie.txt aktif: ✅ Cookie geçerli! 2 satır, 1 domain (1 YouTube).
+2026-03-06 17:57:08  │  INFO      │  aiogram.dispatcher  │  Start polling
+2026-03-06 17:57:08  │  INFO      │  aiogram.dispatcher  │  Run polling for bot @HarmonySongMusic_bot id=8621616338 - '𝐻𝑎𝑟𝑚𝑜𝑛𝑦 𝑀𝑢𝑠𝑖𝑐'
+2026-03-06 17:57:14  │  INFO      │  aiogram.dispatcher  │  Polling stopped
+2026-03-06 17:57:14  │  INFO      │  HarmonyDB  │  🔴 Veritabanı bağlantısı kapatıldı.
+2026-03-06 17:57:14  │  INFO      │  HarmonyMusicBot  │  🔴 Veritabanı kapatıldı.
+2026-03-06 17:57:14  │  ERROR     │  aiogram.dispatcher  │  Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-03-06 17:57:14  │  WARNING   │  aiogram.dispatcher  │  Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8621616338)
+2026-03-06 17:57:14  │  INFO      │  HarmonyMusicBot  │  🔴 Bot kapatılıyor...
+2026-03-06 17:57:14  │  INFO      │  aiogram.dispatcher  │  Polling stopped for bot @HarmonySongMusic_bot id=8621616338 - '𝐻𝑎𝑟𝑚𝑜𝑛𝑦 𝑀𝑢𝑠𝑖𝑐'
+2026-03-06 18:38:55  │  INFO      │  HarmonyMusicBot  │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-03-06 18:38:55  │  INFO      │  HarmonyMusicBot  │  🎵 HARMONY MUSIC v3.0.0 BAŞLATILIYOR...
+2026-03-06 18:38:55  │  INFO      │  HarmonyMusicBot  │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-03-06 18:38:55  │  INFO      │  HarmonyMusicBot  │    Bot Adı    : Harmony Music Bot
+2026-03-06 18:38:55  │  INFO      │  HarmonyMusicBot  │    Kullanıcı  : @@HarmonySongMusic_bot
+2026-03-06 18:38:55  │  INFO      │  HarmonyMusicBot  │    Sahip IDs  : [8548853828]
+2026-03-06 18:38:55  │  INFO      │  HarmonyMusicBot  │    Veritabanı : data/harmony_music.db
+2026-03-06 18:38:55  │  INFO      │  HarmonyMusicBot  │    İndirmeler : downloads
+2026-03-06 18:38:55  │  INFO      │  HarmonyMusicBot  │    Maks.Süre  : 600s
+2026-03-06 18:38:55  │  INFO      │  HarmonyMusicBot  │    Throttle   : 2.0s
+2026-03-06 18:38:55  │  INFO      │  HarmonyMusicBot  │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-03-06 18:38:55  │  INFO      │  HarmonyMusicBot  │    🍪 Cookie  : ✅ AKTİF
+2026-03-06 18:38:55  │  INFO      │  HarmonyMusicBot  │    🎚 Kalite  : 320kbps MP3
+2026-03-06 18:38:55  │  INFO      │  HarmonyMusicBot  │    🎬 Video   : 720p
+2026-03-06 18:38:55  │  INFO      │  HarmonyMusicBot  │    📦 Maks.Boy: 50MB
+2026-03-06 18:38:55  │  INFO      │  HarmonyMusicBot  │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-03-06 18:38:56  │  INFO      │  HarmonyMusicBot  │  ✅ Bot başarıyla başlatıldı! Polling dinleniyor...
+2026-03-06 18:38:56  │  INFO      │  HarmonyMusicBot  │  ✅ FFmpeg aktif: C:/Program Files/EaseUS/EaseUS Data Recovery Wizard/VideoViewer\ffmpeg.exe
+2026-03-06 18:38:56  │  INFO      │  HarmonyDB  │  ✅ Veritabanı başlatıldı: data/harmony_music.db
+2026-03-06 18:38:56  │  INFO      │  HarmonyMusicBot  │  ✅ Veritabanı başlatıldı.
+2026-03-06 18:38:56  │  INFO      │  HarmonyMusicBot  │  ✅ Bot komutları Telegram'a kaydedildi.
+2026-03-06 18:38:56  │  INFO      │  HarmonyMusicBot  │  ✅ Gerekli dizinler oluşturuldu.
+2026-03-06 18:39:00  │  INFO      │  pyrogram.crypto.aes  │  Using TgCrypto
+2026-03-06 18:39:02  │  INFO      │  Userbot  │  Asistan (Userbot) başlatılıyor...
+2026-03-06 18:39:05  │  INFO      │  pyrogram.connection.connection  │  Connecting...
+2026-03-06 18:39:05  │  INFO      │  pyrogram.connection.connection  │  Connected! Production DC4 - IPv4
+2026-03-06 18:39:05  │  INFO      │  pyrogram.session.session  │  NetworkTask started
+2026-03-06 18:39:08  │  INFO      │  pyrogram.session.session  │  NetworkTask stopped
+2026-03-06 18:39:08  │  INFO      │  pyrogram.connection.connection  │  Disconnected
+2026-03-06 18:39:08  │  INFO      │  pyrogram.session.session  │  Session stopped
+2026-03-06 18:39:08  │  ERROR     │  Userbot  │  Asistan başlatılamadı: Telegram says: [406 AUTH_KEY_DUPLICATED] (caused by "InvokeWithLayer") Pyrogram 2.3.69 thinks: The same authorization key (session file) was used in more than one place simultaneously. You must delete your session file and log in again with your phone number or bot token
+2026-03-06 18:39:08  │  INFO      │  HarmonyMusicBot  │  🍪 Cookie.txt aktif: ✅ Cookie geçerli! 2 satır, 1 domain (1 YouTube).
+2026-03-06 18:39:08  │  INFO      │  aiogram.dispatcher  │  Start polling
+2026-03-06 18:39:08  │  INFO      │  aiogram.dispatcher  │  Run polling for bot @HarmonySongMusic_bot id=8621616338 - '𝐻𝑎𝑟𝑚𝑜𝑛𝑦 𝑀𝑢𝑠𝑖𝑐'
+2026-03-06 18:39:13  │  ERROR     │  aiogram.dispatcher  │  Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-03-06 18:39:13  │  WARNING   │  aiogram.dispatcher  │  Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8621616338)
+2026-03-06 18:39:19  │  ERROR     │  aiogram.dispatcher  │  Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-03-06 18:39:19  │  WARNING   │  aiogram.dispatcher  │  Sleep for 1.364679 seconds and try again... (tryings = 1, bot id = 8621616338)
+2026-03-06 18:39:25  │  ERROR     │  aiogram.dispatcher  │  Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-03-06 18:39:25  │  WARNING   │  aiogram.dispatcher  │  Sleep for 1.712655 seconds and try again... (tryings = 2, bot id = 8621616338)
+2026-03-06 18:39:32  │  ERROR     │  aiogram.dispatcher  │  Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-03-06 18:39:32  │  WARNING   │  aiogram.dispatcher  │  Sleep for 2.073539 seconds and try again... (tryings = 3, bot id = 8621616338)
+2026-03-06 18:39:40  │  ERROR     │  aiogram.dispatcher  │  Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-03-06 18:39:40  │  WARNING   │  aiogram.dispatcher  │  Sleep for 2.630877 seconds and try again... (tryings = 4, bot id = 8621616338)
+2026-03-06 18:39:47  │  ERROR     │  aiogram.dispatcher  │  Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-03-06 18:39:47  │  WARNING   │  aiogram.dispatcher  │  Sleep for 3.614323 seconds and try again... (tryings = 5, bot id = 8621616338)
+2026-03-06 18:39:55  │  ERROR     │  aiogram.dispatcher  │  Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-03-06 18:39:55  │  WARNING   │  aiogram.dispatcher  │  Sleep for 4.763055 seconds and try again... (tryings = 6, bot id = 8621616338)
+2026-03-06 18:40:00  │  INFO      │  aiogram.dispatcher  │  Polling stopped
+2026-03-06 18:40:00  │  INFO      │  HarmonyDB  │  🔴 Veritabanı bağlantısı kapatıldı.
+2026-03-06 18:40:00  │  INFO      │  HarmonyMusicBot  │  🔴 Veritabanı kapatıldı.
+2026-03-06 18:40:00  │  ERROR     │  aiogram.dispatcher  │  Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-03-06 18:40:00  │  WARNING   │  aiogram.dispatcher  │  Sleep for 4.946883 seconds and try again... (tryings = 7, bot id = 8621616338)
+2026-03-06 18:40:01  │  INFO      │  HarmonyMusicBot  │  🔴 Bot kapatılıyor...
+2026-03-06 18:40:01  │  INFO      │  aiogram.dispatcher  │  Polling stopped for bot @HarmonySongMusic_bot id=8621616338 - '𝐻𝑎𝑟𝑚𝑜𝑛𝑦 𝑀𝑢𝑠𝑖𝑐'

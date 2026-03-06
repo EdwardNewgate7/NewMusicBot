@@ -1,0 +1,33 @@
+# ── Python ─────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ── Ortam Değişkenleri ─────────────────────────────────
+.env
+
+# ── Veritabanı ─────────────────────────────────────────
+data/
+*.db
+*.db-journal
+*.db-wal
+
+# ── İndirilen Dosyalar ─────────────────────────────────
+downloads/
+
+# ── IDE ────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Sanal Ortam ────────────────────────────────────────
+venv/
+.venv/
+env/
