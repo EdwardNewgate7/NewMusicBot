@@ -88,6 +88,13 @@ def validate_cookie_file() -> dict[str, Any]:
 
     try:
         with open(cookie_path, "r", encoding="utf-8", errors="ignore") as f:
+            # First line check for Netscape header
+            first_line = f.readline()
+            if not any(header in first_line for header in ["# Netscape", "# HTTP Cookie File"]):
+                result["message"] = "⚠️ Geçersiz format: Cookie dosyası Netscape header'ı içermiyor."
+                return result
+            
+            f.seek(0)
             lines = f.readlines()
 
         result["path"] = cookie_path
@@ -98,9 +105,12 @@ def validate_cookie_file() -> dict[str, Any]:
         for line in lines:
             line = line.strip()
             if line and not line.startswith("#"):
+                # Netscape spec says tabs
                 parts = line.split("\t")
                 if len(parts) >= 7:
-                    domains.add(parts[0])
+                    # Sanity check: second to last parts should be numbers/booleans usually
+                    if parts[0].startswith(".") or "youtube" in parts[0]:
+                        domains.add(parts[0])
 
         result["domain_count"] = len(domains)
 
@@ -110,7 +120,7 @@ def validate_cookie_file() -> dict[str, Any]:
             if "youtube" in d or "google" in d or "googlevideo" in d
         }
 
-        if yt_domains:
+        if yt_domains and len(lines) > 5:
             result["valid"] = True
             result["message"] = (
                 f"✅ Cookie geçerli! {len(lines)} satır, "
@@ -119,7 +129,7 @@ def validate_cookie_file() -> dict[str, Any]:
         else:
             result["message"] = (
                 f"⚠️ Cookie dosyası {len(lines)} satır içeriyor "
-                "ancak YouTube domain'i bulunamadı."
+                "ancak çok kısa veya YouTube domain'i bulunamadı."
             )
 
     except Exception as e:
