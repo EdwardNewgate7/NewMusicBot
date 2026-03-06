@@ -41,7 +41,8 @@ from aiogram.types import BotCommand, BotCommandScopeAllGroupChats
 from aiogram.exceptions import TelegramBadRequest
 from aiogram.filters import ExceptionTypeFilter
 
-from config import config
+import config as bot_config
+config = bot_config.config
 from database.db import close_db, init_db
 from middlewares.throttle import DatabaseMiddleware, ThrottleMiddleware
 
@@ -307,3 +308,4 @@ if __name__ == "__main__":
         asyncio.run(main())
     except KeyboardInterrupt:
         print("\n🔴 Bot kullanıcı tarafından durduruldu.")
+
