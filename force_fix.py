@@ -39,14 +39,22 @@ async def force_fix():
     # 1. Cookie.txt İndirme (Batbin veya başka bir yerden)
     # Eğer .env'de boşsa default'u dene
     cookie_url = config.COOKIE_URL or "https://batbin.me/conjugated"
+    # Batbin raw endpoint check
+    if "batbin.me" in cookie_url and "/raw/" not in cookie_url:
+        cookie_url = cookie_url.replace("batbin.me/", "batbin.me/raw/")
+
     try:
         cookie_path = Path("cookie.txt")
         logger.info(f"Cookie indiriliyor: {cookie_url}")
         req = urllib.request.Request(cookie_url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req, timeout=15) as response:
             content = response.read().decode('utf-8')
-            cookie_path.write_text(content, encoding='utf-8')
-            logger.info("✅ Cookie.txt başarıyla indirildi ve kaydedildi.")
+            # Check if it looks like HTML (if so, we probably didn't get the raw file)
+            if "<!DOCTYPE html>" in content or "<html" in content:
+                logger.error("❌ Hata: İndirilen içerik HTML görünüyor, raw link olduğundan emin olun.")
+            else:
+                cookie_path.write_text(content, encoding='utf-8')
+                logger.info("✅ Cookie.txt başarıyla indirildi ve kaydedildi.")
     except Exception as e:
         logger.error(f"❌ Cookie indirme hatası: {e}")
 
