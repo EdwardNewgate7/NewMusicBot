@@ -18,7 +18,7 @@ from config import config
 
 logger = logging.getLogger("MusicService")
 
-SERVICE_VERSION = "3.0.1-FIX-IMPORT"
+SERVICE_VERSION = "3.0.2-STABLE-DOWNLOAD"
 
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -436,16 +436,17 @@ def _download_sync(
 
     best_audio_format_id = _pick_best_audio_format_id(info)
     formats_to_try = [
+        "bestaudio/best",
         best_audio_format_id,
-        ydl_opts["format"],
         "bestaudio",
         "best",
-        None,
     ]
     normalized_formats: list[str | None] = []
     for fmt in formats_to_try:
-        if fmt not in normalized_formats and fmt != "":
+        if fmt and fmt not in normalized_formats:
             normalized_formats.append(fmt)
+    # Ayrıca 'pop format' seçeneği için None ekle (en son çare)
+    normalized_formats.append(None)
 
     cookie_profiles = [True]
     if ydl_opts.get("cookiefile"):
@@ -589,7 +590,12 @@ def _download_video_sync(
     if duration > max_duration:
         return None
 
-    formats_to_try = [ydl_opts["format"], "best[height<=720]", "best"]
+    formats_to_try = [
+        ydl_opts["format"],
+        f"bestvideo[height<={quality}]+bestaudio/best[height<={quality}]",
+        "bestvideo+bestaudio/best",
+        "best",
+    ]
     last_error: Exception | None = None
     for selected_format in formats_to_try:
         try:
@@ -830,3 +836,4 @@ def get_download_file_count() -> int:
     if not download_dir.exists():
         return 0
     return sum(1 for f in download_dir.iterdir() if f.is_file())
+
