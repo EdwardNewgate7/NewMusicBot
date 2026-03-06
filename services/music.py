@@ -575,7 +575,7 @@ def _download_video_sync(
         "postprocessors": [
             {
                 "key": "FFmpegVideoConvertor",
-                "preferredformat": "mp4",
+                "preferedformat": "mp4",
             },
         ],
     })
