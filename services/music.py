@@ -225,6 +225,7 @@ def _search_sync(query: str, max_results: int) -> list[SearchResult]:
                 channel=channel,
                 view_count=view_count,
                 upload_date=upload_date,
+                is_live=entry.get("is_live", False),
             ))
 
     return results
@@ -297,6 +298,7 @@ def _search_detailed_sync(
                 ),
                 view_count=entry.get("view_count") or 0,
                 upload_date=entry.get("upload_date", ""),
+                is_live=entry.get("is_live", False),
             ))
 
     return results
