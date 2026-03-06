@@ -212,7 +212,6 @@ class Config:
             "extractor_args": {
                 "youtube": {
                     "player_client": ["android", "ios", "web", "mweb"],
-                    "skip": ["dash", "hls"],
                 },
             },
             "nocheckcertificate": True,
@@ -249,4 +248,3 @@ class Config:
 
 # Tüm uygulamada kullanılacak Config kopyesi
 config = Config()
-
