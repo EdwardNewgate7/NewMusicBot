@@ -32,3 +32,4 @@ class SearchResult:
     channel: str = ""
     view_count: int = 0
     upload_date: str = ""
+    is_live: bool = False
