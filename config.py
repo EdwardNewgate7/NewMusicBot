@@ -165,8 +165,12 @@ class Config:
                     req = urllib.request.Request(cookie_url, headers={'User-Agent': 'Mozilla/5.0'})
                     with urllib.request.urlopen(req, timeout=10) as response:
                         content = response.read().decode('utf-8')
-                        cookie_path.write_text(content, encoding='utf-8')
-                        logging.getLogger("Config").info(f"Cookie dosyası güncellendi (URL): {cookie_url}")
+                        # Check if it looks like HTML
+                        if "<!DOCTYPE" in content or "<html" in content:
+                            logging.getLogger("Config").error(f"Cookie URL'den indirilirken geçersiz içerik (HTML) algılandı: {cookie_url}")
+                        else:
+                            cookie_path.write_text(content, encoding='utf-8')
+                            logging.getLogger("Config").info(f"Cookie dosyası güncellendi (URL): {cookie_url}")
             except Exception as e:
                 logging.getLogger("Config").error(f"Cookie URL'den indirilirken hata oluştu: {e}")
 
@@ -245,3 +249,4 @@ class Config:
 
 # Tüm uygulamada kullanılacak Config kopyesi
 config = Config()
+
