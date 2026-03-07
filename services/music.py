@@ -421,7 +421,10 @@ def _download_sync(
         "embedthumbnail": False,
     })
 
-    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+    info_opts = dict(ydl_opts)
+    info_opts.pop("format", None)
+    info_opts["skip_download"] = True
+    with yt_dlp.YoutubeDL(info_opts) as ydl:
         info = ydl.extract_info(url, download=False)
 
     if not info:
@@ -462,6 +465,7 @@ def _download_sync(
                     attempt_opts["format"] = selected_format
                 if not use_cookie:
                     attempt_opts.pop("cookiefile", None)
+                attempt_opts["skip_download"] = False
                 with yt_dlp.YoutubeDL(attempt_opts) as attempt_ydl:
                     attempt_ydl.download([url])
                 last_error = None
@@ -836,4 +840,3 @@ def get_download_file_count() -> int:
     if not download_dir.exists():
         return 0
     return sum(1 for f in download_dir.iterdir() if f.is_file())
-
