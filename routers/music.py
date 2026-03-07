@@ -246,14 +246,21 @@ async def _download_and_send_song(
 
         # Ses dosyasını Oynat
         try:
-            # Sesli Sohbet yayını
             from services.userbot import assistant
-            import asyncio
-            if assistant.is_started:
-                from pytgcalls.types import MediaStream
-                asyncio.create_task(
-                    assistant.play_audio(message.chat.id, song.file_path)
+            playback_started = await assistant.play_audio(
+                message.chat.id, song.file_path
+            )
+            if not playback_started:
+                chat_queue.skip()
+                await status_msg.edit_text(
+                    text=(
+                        f'<tg-emoji emoji-id="{emoji.STOP}">⛔</tg-emoji>'
+                        " <b>SES SOHBETİNDE OYNATMA BAŞLATILAMADI.</b>\n"
+                        "<i>Asistan hesabını gruba ekleyip tekrar deneyin.</i>"
+                    ),
+                    parse_mode="HTML",
                 )
+                return
             
             from utils.keyboards import get_now_playing_keyboard
             
@@ -569,13 +576,20 @@ async def cmd_voynat(message: Message) -> None:
         return
 
     try:
-        # Sesli Sohbet yayını (Video)
         from services.userbot import assistant
-        import asyncio
-        if assistant.is_started:
-            asyncio.create_task(
-                assistant.play_audio(message.chat.id, video.file_path, is_video=True)
+        playback_started = await assistant.play_audio(
+            message.chat.id, video.file_path, is_video=True
+        )
+        if not playback_started:
+            await status_msg.edit_text(
+                text=(
+                    f'<tg-emoji emoji-id="{emoji.STOP}">⛔</tg-emoji>'
+                    " <b>VİDEO SES SOHBETİNDE BAŞLATILAMADI.</b>\n"
+                    "<i>Asistan hesabını gruba ekleyip tekrar deneyin.</i>"
+                ),
+                parse_mode="HTML",
             )
+            return
 
         from utils.keyboards import get_now_playing_keyboard
         
@@ -829,13 +843,19 @@ async def cmd_atla(message: Message) -> None:
     next_item = q.skip()
 
     if next_item:
-        # Sonraki müziği ses kanalına ver
         from services.userbot import assistant
-        import asyncio
-        if assistant.is_started:
-            asyncio.create_task(
-                assistant.play_audio(message.chat.id, next_item.song.file_path)
+        playback_started = await assistant.play_audio(
+            message.chat.id, next_item.song.file_path
+        )
+        if not playback_started:
+            await message.answer(
+                text=(
+                    f'<tg-emoji emoji-id="{emoji.STOP}">⛔</tg-emoji>'
+                    " <b>SIRADAKİ ŞARKI BAŞLATILAMADI.</b>"
+                ),
+                parse_mode="HTML",
             )
+            return
 
         await message.answer(
             text=(
