@@ -251,17 +251,13 @@ async def cb_search_play(callback: CallbackQuery) -> None:
 
         try:
             from services.userbot import assistant
-            import asyncio
             
-            # Sesli Sohbet yayını (Asistan aktifse)
-            if assistant.is_started:
-                asyncio.create_task(
-                    assistant.play_audio(callback.message.chat.id, song.file_path)
-                )
-                
+            playback_started = await assistant.play_audio(
+                callback.message.chat.id, song.file_path
+            )
+            if playback_started:
                 from utils.keyboards import get_now_playing_keyboard
                 status_badge = "🔴 Canlı Yayın" if song.is_live else f"⏱ {format_duration(song.duration)} dakika"
-                
                 await callback.message.edit_text(
                     text=(
                         f"<b>→ {'Yayın' if song.is_live else 'Akış'} başlatıldı</b>\n\n"
@@ -273,6 +269,7 @@ async def cb_search_play(callback: CallbackQuery) -> None:
                     reply_markup=get_now_playing_keyboard(url=song.url),
                 )
             else:
+                chat_queue.skip()
                 # Private chat veya asistan kapalıysa dosyayı gönder
                 audio_file = FSInputFile(
                     song.file_path,
@@ -319,7 +316,7 @@ async def cb_search_play(callback: CallbackQuery) -> None:
             )
 
         finally:
-            _cleanup(song.file_path)
+            pass
 
 
 @router.callback_query(F.data.startswith("sdl_"))
@@ -411,12 +408,15 @@ async def cb_skip_now(callback: CallbackQuery) -> None:
 
     if next_item:
         from services.userbot import assistant
-        import asyncio
-        if assistant.is_started:
-            # Öncekini durdur ve yenisini başlat
-            asyncio.create_task(
-                assistant.play_audio(callback.message.chat.id, next_item.song.file_path)
+        playback_started = await assistant.play_audio(
+            callback.message.chat.id, next_item.song.file_path
+        )
+        if not playback_started:
+            await callback.answer(
+                "❌ Sıradaki şarkı sesli sohbette başlatılamadı.",
+                show_alert=True,
             )
+            return
 
         from utils.keyboards import get_now_playing_keyboard
         status_badge = "🔴 Canlı Yayın" if next_item.song.is_live else f"⏱ {format_duration(next_item.song.duration)} dakika"
